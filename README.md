@@ -1,7 +1,8 @@
 # CODING Q&A
 
-# Wednesday June 24th
+Random projects / code samples from Q&A streams. This repo could be better organized...
 
+# Wednesday June 24th
 
 * jonahjoe
   * How to address issues related to IE browser as most of the code doesn't work there (ES6 classes etc..)
