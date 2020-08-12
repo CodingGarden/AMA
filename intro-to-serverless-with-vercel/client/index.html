@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="viewCount"></h1>
+  <div id="chatters"></div>
+  <script>
+    // THE RIGHT WAY (actual select the elements):
+    // const viewCount = document.querySelector('#viewCount');
+    // const chatters = document.querySelector('#chatters');
+    async function getChattersOnTheFrontendCauseThatsWhereWeAre() {
+      // CORS ERROR!
+      // const response = await fetch('https://tmi.twitch.tv/group/user/codinggarden/chatters');
+
+      // Call our proxy instead!
+      const response = await fetch('https://tmi-proxy.vercel.app/api/chatters');
+      const json = await response.json();
+      viewCount.textContent = json.chatter_count;
+      chatters.textContent = json.chatters.viewers.join(', ');
+    }
+    getChattersOnTheFrontendCauseThatsWhereWeAre();
+  </script>
+</body>
+</html>
