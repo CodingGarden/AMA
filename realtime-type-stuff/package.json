@@ -1,0 +1,25 @@
+{
+  "name": "realtime-type-stuff",
+  "version": "1.0.0",
+  "description": "* mizticNZL   * what is the best way to show webhook data from the backend in a react component (frontend) - is the only way websockets?   * How do we show realtime data on a webpage?     * Data in a DB / Server changes...       * How can the client immediately reflect that??",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "CJ R. <cj@null.computer> (https://w3cj.sh)",
+  "license": "MIT",
+  "dependencies": {
+    "bad-words": "^3.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ws": "^7.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
+  }
+}
