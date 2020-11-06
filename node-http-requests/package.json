@@ -1,0 +1,17 @@
+{
+  "name": "node-http-requests",
+  "version": "1.0.0",
+  "description": "* axios * fetch   * node-Fetch   * isomorphic-fetch     * whatwg-fetch * got * superagent * request * exec curl * core node.js modules   * http/https   * net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "CJ R. <cj@null.computer> (https://w3cj.sh)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "got": "^11.6.0",
+    "node-fetch": "^2.6.1"
+  }
+}
