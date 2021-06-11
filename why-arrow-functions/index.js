@@ -46,6 +46,8 @@ class Player {
 }
 
 const playerOne = new Player('cj');
+const playerTwo = new Player('onelineofme');
+const playerThree = new Player('onelineofme');
 
 setInterval(() => {
   playerOne.tick();
