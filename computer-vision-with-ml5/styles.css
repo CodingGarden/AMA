@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 500px;
+  height: 281.25px;
+}
+
+.video-wrapper {
+  width: 500px;
+  height: 281.25px;
+  position: relative;
+}
+
+.face-box {
+  position: absolute;
+  outline: 2px solid red;
+}
+
+.eye {
+  position: absolute;
+  font-size: 2.5rem;
+  /* width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%; */
+  transform: translate(-50%, -50%);
+}

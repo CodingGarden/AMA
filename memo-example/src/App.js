@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useCallback, useState, useMemo } from 'react';
 import './App.css';
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   const [pokemons, setPokemons] = useState([]);
   const [filter, setFilter] = useState('');
   const [otherThing, setOtherThing] = useState('');
-  const [filteredPokemon, setFilteredPokemons] = useState([]);
+  // const [filteredPokemon, setFilteredPokemons] = useState([]);
 
   useEffect(() => {
     (async function getPokemons() {
@@ -18,28 +18,31 @@ function App() {
     })();
   }, []);
 
-  // const filteredPokemon = useMemo(() => {
-  //   console.log('calculating filtered pokemon for filter:', filter);
-  //   const regexp = new RegExp(filter, 'gi');
-  //   return pokemons.filter((pokemon) => {
-  //     console.log('checking pokemon', pokemon.name, filter);
-  //     return pokemon.name.match(regexp);
-  //   });
-  // }, [pokemons, filter]);
+  const filteredPokemon = useMemo(() => {
+    console.log('calculating filtered pokemon for filter:', filter);
 
-  useEffect(() => {
-    let timeoutId = setTimeout(() => {
-      console.log('setting filtered pokemon...', filter);
-      const regexp = new RegExp(filter, 'gi');
-      setFilteredPokemons(pokemons.filter((pokemon) => {
-          console.log('checking pokemon', pokemon.name, filter);
-          return pokemon.name.match(regexp);
-      }));
-    }, 1000);
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    if (!filter) return pokemons;
+    const regexp = new RegExp(filter, 'gi');
+    return pokemons.filter((pokemon) => {
+      console.log('checking pokemon', pokemon.name, filter);
+      return pokemon.name.match(regexp);
+    });
   }, [pokemons, filter]);
+
+  // useEffect(() => {
+  //   let timeoutId = setTimeout(() => {
+  //     console.log('setting filtered pokemon...', filter);
+  //     const regexp = new RegExp(filter, 'gi');
+  //     setFilteredPokemons(pokemons.filter((pokemon) => {
+  //         console.log('checking pokemon', pokemon.name, filter);
+  //         return pokemon.name.match(regexp);
+  //     }));
+  //   }, 1000);
+  //   return () => {
+  //     clearTimeout(timeoutId);
+  //   };
+  // }, [pokemons, filter]);
+  // const setFilterCallback = useCallback((e) => setFilter(e.target.value), []);
 
   console.log('RENDER FUNCTION IS RUNNING');
   return (
