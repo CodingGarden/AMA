@@ -10,6 +10,6 @@
   "author": "CJ R. <cj@null.computer> (https://w3cj.sh)",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.2"
   }
 }
