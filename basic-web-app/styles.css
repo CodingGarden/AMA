@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.my-box {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+  border-radius: 20px;
+  color: white;
+  white-space: pre;
+  word-wrap: break-word;
+}
