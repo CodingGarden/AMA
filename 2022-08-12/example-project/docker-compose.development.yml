@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  app:
+    image: app
+    build: .
+    command: npm run start:dev
+    restart: on-failure
+    volumes:
+      - ./:/usr/src/app:cached
+      - npm_cache:/root/.npm:delegated
+      - node_modules:/usr/src/app/node_modules:delegated
+    ports:
+      - 4242:4242
+
+volumes:
+  npm_cache:
+  node_modules:
