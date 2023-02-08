@@ -1,0 +1,13 @@
+{
+    "name": "codinggarden/tryingphp",
+    "type": "project",
+    "require": {
+        "mongodb/mongodb": "^1.15"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "w3cj"
+        }
+    ]
+}

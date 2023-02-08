@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    restart: always
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - 8989:80
+  db:
+    image: mongo:4
+    restart: always
+    volumes:
+      - ./docker-data/db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
