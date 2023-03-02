@@ -3,9 +3,25 @@
   "remote": {},
   "npm": {
     "specifiers": {
+      "@preact/signals": "@preact/signals@1.1.3_preact@10.13.0",
       "zod": "zod@3.20.6"
     },
     "packages": {
+      "@preact/signals-core@1.2.3": {
+        "integrity": "sha512-Kui4p7PMcEQevBgsTO0JBo3gyQ88Q3qzEvsVCuSp11t0JcN4DmGCTJcGRVSCq7Bn7lGxJBO+57jNSzDoDJ+QmA==",
+        "dependencies": {}
+      },
+      "@preact/signals@1.1.3_preact@10.13.0": {
+        "integrity": "sha512-N09DuAVvc90bBZVRwD+aFhtGyHAmJLhS3IFoawO/bYJRcil4k83nBOchpCEoS0s5+BXBpahgp0Mjf+IOqP57Og==",
+        "dependencies": {
+          "@preact/signals-core": "@preact/signals-core@1.2.3",
+          "preact": "preact@10.13.0"
+        }
+      },
+      "preact@10.13.0": {
+        "integrity": "sha512-ERdIdUpR6doqdaSIh80hvzebHB7O6JxycOhyzAeLEchqOq/4yueslQbfnPwXaNhAYacFTyCclhwkEbOumT0tHw==",
+        "dependencies": {}
+      },
       "zod@3.20.6": {
         "integrity": "sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==",
         "dependencies": {}
